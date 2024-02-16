@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'railapp',
+    'railapp'
 ]
 
 MIDDLEWARE = [
@@ -76,8 +76,14 @@ WSGI_APPLICATION = 'railbook.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'amvrail',
+        'HOST': 'AM-TIC-AIO-DKSO\SQLEXPRESS1',
+        'PORT':'',
+        'OPTIONS':
+            {
+                'DRIVER': 'ODBC Driver 17 for SQL Server'
+            }
     }
 }
 
